@@ -20,14 +20,13 @@ class Employee {
   void        toString() const;
 
   Employee &operator  =(const Employee &emp);
-  Employee &operator +=(const Employee &emp);
 
   bool operator ==(const Employee &emp) const;
   bool operator !=(const Employee &emp) const {return !(this == &emp);}
 
  private:
   char *first_name;
-  char *second_name;
+  char *last_name;
 };
 
 #endif /* __EX_EMPOYEE_H */
