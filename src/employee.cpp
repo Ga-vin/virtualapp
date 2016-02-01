@@ -92,3 +92,8 @@ bool Employee::operator ==(const Employee &emp) const
   return ((0 == strcmp(this->getFirstName(), emp.getFirstName())) &&
 	  (0 == strcmp(this->getSecondName(), emp.getSecondName())));
 }
+
+void Employee::toString() const
+{
+  cout << this->getSecondName() << "." << this->getFirstName() << endl;
+}

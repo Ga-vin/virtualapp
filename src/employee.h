@@ -17,12 +17,14 @@ class Employee {
   const char *getSecondName() const;
   void        setFirstName(const char *first);
   void        setSecondName(const char *second);
-  void        toString() const;
 
   Employee &operator  =(const Employee &emp);
 
   bool operator ==(const Employee &emp) const;
   bool operator !=(const Employee &emp) const {return !(this == &emp);}
+
+  virtual double earnings() const = 0;
+  virtual void   toString() const;  
 
  private:
   char *first_name;
